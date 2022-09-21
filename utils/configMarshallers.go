@@ -2,7 +2,6 @@ package utils
 
 import (
 	"encoding/json"
-	"log"
 	"os"
 
 	"github.com/dilungasr/reuse/logger"
@@ -28,7 +27,7 @@ func ReadJSON(filePath string) {
 
 	err := json.Unmarshal(content, &models.ProjectChanges)
 	if err != nil {
-		log.Fatal(err)
+		logger.Fatal(err)
 	}
 }
 
@@ -38,7 +37,7 @@ func ReadYAML(filePath string) {
 
 	err := yaml.Unmarshal(content, &models.ProjectChanges)
 	if err != nil {
-		log.Fatal(err)
+		logger.Fatal(err)
 	}
 }
 
@@ -48,6 +47,6 @@ func ReadTOML(filePath string) {
 
 	err := toml.Unmarshal(content, &models.ProjectChanges)
 	if err != nil {
-		log.Fatal(err)
+		logger.Fatal(err)
 	}
 }
