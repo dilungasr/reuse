@@ -17,7 +17,7 @@ func ReadFromInput() {
 	ignore := utils.SpacedStringToSlice(utils.ScanString())
 
 	// rep
-	fmt.Println("Define your replacements (in old : new pair per line)")
+	fmt.Println("Define your replacements (in old: new pair per line)")
 	fmt.Println("Enter q to finish:")
 	changesInputs := utils.ScanStringPerLine()
 	//del
