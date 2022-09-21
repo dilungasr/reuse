@@ -1,16 +1,21 @@
+# replacements in old: new pair
 rep:
   Text1: NewText1
   Text2: NewText2
   github.com/dilungasr/goreuse: "github.com/dilungasr/reuse"
+# files to delete 
 del:
   - go.sum
   - go.mod
   - .git
+# commnds to run at the end
 run:
   - go mod init "github.com/dilungasr/reuse"
   - go mod tidy -v
   - echo "Happy coding!"
+# extensions to modify contents on
 ext:
   - go
+# files to ignore in the iterations 
 ignore:
-  - reuse.yaml
+  - reuse.yml
