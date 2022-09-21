@@ -15,10 +15,15 @@ import (
 
 // Run interprets and runs the commands defined in the run field of the config
 func Run(projectFolder string) {
-	fmt.Println("")
-	fmt.Println("")
-	fmt.Println("--------Executing setup commands-------")
-	fmt.Println("")
+	// only inform of executing commands only when there are commands
+	// provided
+	if len(models.ProjectChanges.Run) > 0 {
+		fmt.Println("")
+		fmt.Println("")
+		fmt.Println("--------Executing setup commands-------")
+		fmt.Println("")
+	}
+
 	//   iterate the command lines
 	for _, commandLine := range models.ProjectChanges.Run {
 		//   break the full command in single command, the in the indivial components
