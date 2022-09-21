@@ -1,9 +1,11 @@
 package handlers
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/dilungasr/reuse/errs"
 	"github.com/dilungasr/reuse/logger"
@@ -33,7 +35,10 @@ func ReadConfig(filePath, projectFolder string) {
 	}
 }
 
-func FindConfigAndRead(projectFolder string) {
+func FindConfigAndRead(projectFolder string) (found bool) {
+	start := time.Now()
+	fmt.Println("Finding configuration file for reuse...")
+
 	entries, err := os.ReadDir(projectFolder)
 	errs.Check(err)
 
@@ -50,11 +55,26 @@ func FindConfigAndRead(projectFolder string) {
 
 		if name == "reuse.toml" || name == "reuse.yaml" ||
 			name == "reuse.yml" || name == "reuse.json" {
+
+			logger.Elapsed(start, "Found "+name+" in just")
+
+			// start reading
+			start := time.Now()
+			fmt.Println("Starts reading...")
+
 			//    join the fileName with the project folder to create
 			// file path
 			filePath := filepath.Join(projectFolder, name)
 			ReadConfig(filePath, projectFolder)
-			break
+
+			logger.Elapsed(start, "Finished reading "+name+" in just")
+
+			return true
 		}
 	}
+
+	// no config file found
+	logger.Println("Ooops! couldn't find any config file for reuse")
+
+	return false
 }
