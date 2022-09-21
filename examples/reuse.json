@@ -1,0 +1,15 @@
+{
+  "rep": {
+    "Text1": "NewText1",
+    "Text2": "NewText2",
+    "github.com/dilungasr/goreuse": "github.com/dilungasr/reuse"
+  },
+  "del": ["go.sum", " go.mod", ".git"],
+  "run": [
+    "go mod init 'github.com/dilungasr/reuse'",
+    "go mod tidy -v",
+    "echo 'Happy coding!'"
+  ],
+  "ext": ["go"],
+  "ignore": ["reuse.json"]
+}
