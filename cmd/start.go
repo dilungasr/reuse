@@ -1,5 +1,5 @@
 /*
-Copyright © 2022 NAME HERE <EMAIL ADDRESS>
+Copyright © 2022 Dilunga SR <dilungasr@gmail.com>
 */
 package cmd
 
@@ -33,30 +33,45 @@ var startCmd = &cobra.Command{
 			projectPath = filepath.FromSlash(args[0])
 		}
 
-		// check if use flag provided
+		// look for the flags provided
 		use, err := cmd.Flags().GetString("use")
 		errs.Check(err)
 
-		IsConfigProvided := use != ""
+		interactive, err := cmd.Flags().GetString("interact")
+		errs.Check(err)
 
-		// read the configuration file  is there is a config file to use
-		if IsConfigProvided {
+		IsConfigProvided := use != ""
+		IsInteractive := interactive != ""
+
+		// interactively take configurations from the user
+		// if it's in interative mode
+		if IsInteractive {
+			handlers.ReadFromInput()
+		} else if IsConfigProvided {
+			// read the configuration file if there is a config file to use
 			handlers.ReadConfig(use, projectPath)
 		} else {
-			// just go for the console prompts
-			handlers.ReadFromInput()
+			// search configuration file with default config name 'reuse.supportedExt'
+			ok := handlers.FindConfigAndRead(projectPath)
+
+			if !ok {
+				fmt.Println("Attempting to open an interactive mode...")
+				handlers.ReadFromInput()
+			}
 		}
 
 		// // start iterating for deleting and replacing
+
 		fmt.Println("")
 		fmt.Println("")
-		fmt.Println("--------UPDATING PROJECT CONTENTS-------")
+		fmt.Println("Starts modifying contents....")
+		start2 := time.Now()
 		fmt.Println("")
 
 		handlers.Iterate(projectPath)
 
 		// time eplapsed
-		logger.Elapsed(start, "FINISHED UPDATING CONTENTS IN")
+		logger.Elapsed(start2, "Finished modifying contents in")
 
 		// // finish by running the commands
 		handlers.Run(projectPath)
@@ -76,6 +91,7 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	startCmd.PersistentFlags().StringP("use", "u", "", `Provides a path to the configuration file if any. 
-	You do not need this if you want to set your configurations directly on the terminal`,
+	You do not need this in interactive mode`,
 	)
+	startCmd.PersistentFlags().StringP("interact", "i", "", `Start reuse process in interactive mode`)
 }
