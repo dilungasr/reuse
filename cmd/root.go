@@ -32,6 +32,12 @@ Reuse provides a simple way to automate changes to be made on your current proje
 
 Don't start from scratch, don't get stressed...
 Just reuse it :)
+
+LEARN MORE:
+> https://www.github.com/dilungasr/reuse
+
+Much love from Tanzania!
+- By Dilunga SR (Sam) <dilungasr@gmail.com>
 `,
 
 	Run: func(cmd *cobra.Command, args []string) {
@@ -110,8 +116,12 @@ func init() {
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	rootCmd.PersistentFlags().StringP("use", "u", "", `Provides a path to the configuration file if any. 
-	You do not need this in interactive mode`,
-	)
-	rootCmd.PersistentFlags().BoolP("interact", "i", false, `Start reuse process in interactive mode`)
+	rootCmd.PersistentFlags().StringP("use", "u", "", `
+    Use this to provide a path to the supported configuration file if any. 
+	You do not need this in an interactive mode
+	`)
+
+	rootCmd.PersistentFlags().BoolP("interact", "i", false, `
+	Use this to start the reuse process in an interactive mode
+	`)
 }
