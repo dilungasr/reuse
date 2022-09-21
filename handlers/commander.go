@@ -17,7 +17,7 @@ import (
 func Run(projectFolder string) {
 	fmt.Println("")
 	fmt.Println("")
-	fmt.Println("--------EXECUTING COMMANDS-------")
+	fmt.Println("--------Executing setup commands-------")
 	fmt.Println("")
 	//   iterate the command lines
 	for _, commandLine := range models.ProjectChanges.Run {
