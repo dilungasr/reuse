@@ -1,15 +1,17 @@
-#Go Reuse
+# reuse
 
-Go Reuse provides a simple way to reuse your project to create a new project with
-some little changes.
+Reuse provides a simple way to automate changes to be made on your current project folder so you can reuse it for the next project.
 
-- Replacing your module package name to all files in your project so you don't
-  mess with manual work of updating the imports to refer to the new package
-  name.
-- Global replacement to any text in your codes
-- You can exclude files
-- You can specify the target extensions
-- Automate the commands to be run afte rupdating your project
+- Perform project-wise replacement to any text in your code
+- Automate your project setup commands
+- Delete files you don't want in the next project
+- Specify extensions to modify contents on
+- Ignore files you don't want to modify
+- Use terminal interactive mode or define everying in config file
+- Supports yaml, toml and json... There you have it! 
 
 Don't start from scratch, don't get stressed...
 Just reuse it :)
+
+Much love from Tanzania!
+- By Dilunga SR (Sam) <dilungasr@gmail.com>

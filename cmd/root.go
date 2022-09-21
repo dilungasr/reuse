@@ -117,11 +117,11 @@ func init() {
 	// when this action is called directly.
 	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	rootCmd.PersistentFlags().StringP("use", "u", "", `
-    Use this to provide a path to the supported configuration file if any. 
-	You do not need this in an interactive mode
+Use this to provide a path to the supported configuration file if any. 
+You do not need this in an interactive mode.
 	`)
 
 	rootCmd.PersistentFlags().BoolP("interact", "i", false, `
-	Use this to start the reuse process in an interactive mode
+Use this to start the reuse process in an interactive mode
 	`)
 }
