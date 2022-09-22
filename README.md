@@ -13,7 +13,6 @@
 Don't start from scratch, don't get stressed...
 Just **reuse** it :)
 
-
 > ## Installing
 
 If you're using golang and you have it on your machine, then just run,
@@ -232,6 +231,11 @@ Here is a flow...
 - If an attempt fails (no config file found), **reuse** will decide to run in **interactive mode**.
 
 The precedence level ranking:
+
 1. Interactive
 2. explicitly provided config file via **-u**
 3. reuse.js or reuse.yaml or reuse.yaml or reuse.toml
+
+# Contributing
+
+Everyone with Golang skills is warmly welcomed!
