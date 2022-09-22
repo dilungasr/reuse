@@ -11,7 +11,7 @@
 - Supports yaml, toml and json... There you have it!
 
 Don't start from scratch, don't get stressed...
-Just reuse it :)
+Just **reuse** it :)
 
 
 > ## Installing
@@ -29,12 +29,12 @@ After having your binaries on your machine, the next step should be adding them 
 
 > ## Intro - Running
 
-There are two modes to run reuse which are **interactive** and **config** mode.
+There are two modes to run **reuse** which are **interactive** and **config** mode.
 
 > ## Interactive Mode
 
 With **interactive mode**, you are able to define your configuration directly on the terminal via a series interactive prompts.
-To run reuse in interactive mode just `cd` to the project folder and run:
+To run **reuse** in interactive mode just `cd` to the project folder and run:
 
 ```shell
 reuse -i
@@ -94,7 +94,7 @@ Here are prompts and what they mean,
 
 > ## Config Mode
 
-As mentioned before, the second mode in **config mode**. With config mode you are able to provide your configuration in your config file and reuse will read your options and use them in automating the changes.
+As mentioned before, the second mode in **config mode**. With config mode you are able to provide your configuration in your config file and **reuse** will read your options and use them in automating the changes.
 
 **reuse** currently supports json, yaml and toml config files.
 
@@ -186,7 +186,7 @@ reuse
 
 #### Using other names than "reuse" or location than project's root.
 
-Luckily, reuse is extremely unopinionated... You can easily point to your supported config file by using the `-u` flag as simple as:
+Luckily, **reuse** is extremely unopinionated... You can easily point to your supported config file by using the `-u` flag as simple as:
 
 ```shell
 reuse -u ~/projects/myproject/myconfig.yaml
@@ -204,15 +204,15 @@ reuse -u @subdir/myconfig.toml #reads myconfig.toml in the subdir folder(subdire
 
 > ## Running Reuse Outside the Project Folder
 
-Oooh yeaah! it is not a must to run reuse inside the project folder! You can easily run it from anywhere and pass the path to your target project folder.
+Oooh yeaah! it is not a must to run **reuse** inside the project folder! You can easily run it from anywhere and pass the path to your target project folder.
 
-To do so, just provide the project path as the argument to the reuse command,
+To do so, just provide the project path as the argument to the **reuse** command,
 
 ```shell
 reuse ~/projects/myprojects/project1
 ```
 
-Everything else is just similar to running reuse inside the project folder. In fact, running reuse inside the project folder is exactly similar to:
+Everything else is just similar to running **reuse** inside the project folder. In fact, running **reuse** inside the project folder is exactly similar to:
 
 ```shell
 reuse .
