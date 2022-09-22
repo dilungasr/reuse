@@ -23,7 +23,7 @@ go install github.com/dilungasr/reuse
 ```
 
 If golang is not your favor, then I have got portable binaries for you!
-Just click <a href="https://github.com/dilungasr/reuse/raw/master/bin/reuse">here</a> to only download then binaries ... Or you can clone the entire branch and get your binaries inside the `/bin` folder...Ooohww come one! that is overkill, right? The choice is yours!
+Just click <a href="https://github.com/dilungasr/reuse/raw/master/bin/reuse">here</a> to only download the binaries ... Or clone the entire branch and get your binaries inside the `/bin` folder...Ooohww come one! that is an overkill, right? The choice is yours!
 
 After having your binaries on your machine, the next step should be adding them to your `$PATH` so you can be able to run them from anywhere on the terminal.
 
