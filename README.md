@@ -189,7 +189,7 @@ reuse
 
 #### Using other names than "reuse" or location than project's root.
 
-Luckiy, reuse is extremely unopinionated... You can easily point to your supported config file by using the `-u` flag as,
+Luckily, reuse is extremely unopinionated... You can easily point to your supported config file by using the `-u` flag as simple as:
 
 ```shell
 reuse -u ~/projects/myproject/myconfig.yaml
@@ -197,7 +197,7 @@ reuse -u ~/projects/myproject/myconfig.yaml
 reuse --use ~/projects/myproject/myconfig.yaml
 ```
 
-or even simply, with the help of **@** we can refer to the root of your project and thus you can place your config file at any subdirectory or using any name and simply access it with **@** simbol.
+or even easier, with the help of **@** you can refer to the root of your project. For example:
 
 ```shell
 reuse -u @myconfig.toml #reads myconfig.toml in the root of our project folder
