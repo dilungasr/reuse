@@ -1,6 +1,6 @@
 # reuse
 
-Reuse provides a simple way to automate changes to be made on your current project folder so you can reuse it for the next project.
+**reuse** provides a simple way to automate changes to be made on your current project folder so you can reuse it for the next project.
 
 - Perform project-wise replacement to any text in your code
 - Automate your project setup commands
