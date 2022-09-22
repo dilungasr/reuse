@@ -16,7 +16,7 @@ Just reuse it :)
 
 > ## Installing
 
-If you're using golang and you have it on you machine, then just run,
+If you're using golang and you have it on your machine, then just run,
 
 ```shell
 go install github.com/dilungasr/reuse
