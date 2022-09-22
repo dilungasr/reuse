@@ -13,9 +13,6 @@ Reuse provides a simple way to automate changes to be made on your current proje
 Don't start from scratch, don't get stressed...
 Just reuse it :)
 
-Much love from Tanzania!
-
-- By Dilunga SR (Sam) <dilungasr@gmail.com>
 
 > ## Installing
 
